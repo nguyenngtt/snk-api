@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -cp build/libs/*.jar io.snk.AppServer
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/*.jar io.snk.AppServer
