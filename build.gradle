@@ -1,6 +1,7 @@
 plugins {
+    id 'java'
     id 'java-library'
-    id 'application'
+//    id 'application'
 }
 
 group 'io.snk'
@@ -12,9 +13,17 @@ java {
     }
 }
 
-application {
-    mainClass= 'io.snk.AppServer'
+//application {
+//    mainClass= 'io.snk.AppServer'
+//}
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
+task copyToLib(type: Copy) {
+    into "$buildDir/libs"
+    from(configurations.default)
 }
+stage.dependsOn(copyToLib)
 
 repositories {
     mavenCentral()
