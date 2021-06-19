@@ -1,1 +1,1 @@
-web: java -Drestx.http.XForwardedSupport=10.30.114.166 -Dserver.port=$PORT $JAVA_OPTS -cp "build/libs/*" io.snk.AppServer
+web: java -Drestx.http.XForwardedSupport=all -Dserver.port=$PORT $JAVA_OPTS -cp "build/libs/*" io.snk.AppServer
