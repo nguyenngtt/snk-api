@@ -30,6 +30,6 @@ public class AppModule {
     @Provides
     public ConfigSupplier appConfigSupplier(ConfigLoader configLoader) {
         // Load settings.properties in hello package as a set of config entries
-        return configLoader.fromResource("hello/settings");
+        return configLoader.fromResource("io.snk/settings");
     }
 }
