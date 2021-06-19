@@ -17,16 +17,32 @@ repositories {
 }
 
 ext {
+    jacksonVer = "2.9.5"
     restxVer = "0.35"
     logVer = "1.7.13"
 }
 
 dependencies {
+    // Jackson
+    implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVer"
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 
+    implementation "io.restx:restx-common:$restxVer"
+    implementation "io.restx:restx-factory:$restxVer"
+    implementation "io.restx:restx-classloader:$restxVer"
     implementation "io.restx:restx-core:$restxVer"
     implementation "io.restx:restx-core-annotation-processor:$restxVer"
+
+    implementation "io.restx:restx-admin:$restxVer"
+
+    implementation "io.restx:restx-servlet:$restxVer"
+    implementation "io.restx:restx-server-jetty8:$restxVer"
+
+    // Security
+    implementation "io.restx:restx-security-basic:$restxVer"
+
     implementation "org.slf4j:slf4j-log4j12:$logVer"
 }
 

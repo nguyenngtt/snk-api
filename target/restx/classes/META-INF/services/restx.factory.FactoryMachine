@@ -1,0 +1,3 @@
+io.snk.AppModuleFactoryMachine
+io.snk.rest.HelloResourceFactoryMachine
+io.snk.rest.HelloResourceRouterFactoryMachine
