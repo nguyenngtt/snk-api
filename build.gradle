@@ -1,5 +1,6 @@
 plugins {
-    id 'java'
+//    id 'java'
+    id 'application'
     id 'java-library'
 //    id 'application'
 }
@@ -13,10 +14,13 @@ java {
     }
 }
 
-//application {
-//    mainClass= 'io.snk.AppServer'
-//}
+application {
+    mainClass= 'io.snk.AppServer'
+}
 
+distZip.enabled = false
+distTar.enabled = false
+startScripts.enabled = false
 task stage(dependsOn: ['build', 'clean'])
 build.mustRunAfter clean
 task copyToLib(type: Copy) {
