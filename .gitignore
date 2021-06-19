@@ -120,6 +120,8 @@ gradle/
 #jmh
 */generated/*
 
+target/
+
 #log
 temp/*
 tmp/*
