@@ -1,1 +1,0 @@
-web: java -Drestx.http.XForwardedSupport=all -Dserver.port=$PORT $JAVA_OPTS -cp "build/libs/*" io.snk.AppServer
